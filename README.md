@@ -17,13 +17,44 @@ This repository is created to:
 ## Project Structure
 
 PlaywrightLearning/
-├── src
-│   ├── main/java        # Core framework code
-│   └── test/java        # Test cases
 │
-├── docs                 # Learning notes & interview preparation
+├── src
+│   ├── main
+│   │   └── java
+│   │       ├── pages                 # Page Object classes
+│   │       │   └── LoginPage.java
+│   │       │
+│   │       ├── factory               # Playwright setup / browser factory
+│   │       │   └── PlaywrightFactory.java
+│   │       │
+│   │       ├── utils                 # Utilities (config, helpers)
+│   │       │   └── ConfigReader.java
+│   │       │
+│   │       └── constants             # Constants (timeouts, paths)
+│   │           └── FrameworkConstants.java
+│   │
+│   └── test
+│       ├── java
+│       │   ├── stepDefinitions       # Cucumber step definitions
+│       │   │   └── LoginSteps.java
+│       │   │
+│       │   ├── hooks                 # Cucumber hooks
+│       │   │   └── Hooks.java
+│       │   │
+│       │   └── runners               # Test runners
+│       │       └── TestRunner.java
+│       │
+│       └── resources
+│           ├── features              # Gherkin feature files
+│           │   └── login.feature
+│           │
+│           └── config                # Environment configs
+│               └── config.properties
+│
+├── docs                               # Learning notes & interview prep
 │   ├── 01_Playwright_Introduction.md
-│   ├── 02_Architecture.md
+│   ├── 02_Playwright_Architecture.md
+│   ├── 03_Locators.md
 │   └── interview_notes.md
 │
 ├── pom.xml
