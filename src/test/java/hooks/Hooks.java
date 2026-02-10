@@ -1,20 +1,20 @@
 package hooks;
 
 import factory.PlaywrightFactory;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 
 public class Hooks {
 
     private PlaywrightFactory factory;
 
-    @BeforeClass
+    @Before
     public void setUp(){
         factory = new PlaywrightFactory();
         factory.initBrowser();
     }
 
-    @AfterClass
+    @After
     public void tearDown(){
         factory.closeBrowser();
     }
